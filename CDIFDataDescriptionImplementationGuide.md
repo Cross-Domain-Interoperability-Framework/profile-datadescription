@@ -188,7 +188,7 @@ Distribution-level characterization — properties describing the physical file(
 
 [↑ Back to TOC](#table-of-contents)
 
-See [cdifCodelistProfile]().    A controlled-vocabulary codelist implemented as a skos:ConceptScheme constrained for CDIF use. The scheme must have a resolvable @id and identify its top concepts via skos:hasTopConcept; each concept (CdifCodelistConcept) must have a resolvable @id, skos:inScheme, skos:prefLabel, and skos:notation. Hierarchical concepts must declare both skos:narrower (for JSON tree traversal) and skos:broader (for upward navigation) where hierarchy exists.
+See [cdifCodelistProfile](https://github.com/Cross-Domain-Interoperability-Framework/profile-codelist/blob/reviewRevision202606/CDIFCodelistImplementationGuide.md).    A controlled-vocabulary codelist implemented as a skos:ConceptScheme constrained for CDIF use. The scheme must have a resolvable @id and identify its top concepts via skos:hasTopConcept; each concept (CdifCodelistConcept) must have a resolvable @id, skos:inScheme, skos:prefLabel, and skos:notation. Hierarchical concepts must declare both skos:narrower (for JSON tree traversal) and skos:broader (for upward navigation) where hierarchy exists.
 
 ## cdif:ValueAndConceptDescription
 
