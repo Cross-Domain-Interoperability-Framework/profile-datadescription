@@ -2,7 +2,7 @@
 
 This repository holds the published artifacts for the **CDIF Data Description profile module** — the `cdifDataDescription` building block from the [metadataBuildingBlocks](https://github.com/Cross-Domain-Interoperability-Framework/metadataBuildingBlocks) source register.
 
-> **Scope.** `cdifDataDescription` is a profile *module*: it adds the data-description constraints (variable-level `cdif:physicalDataType`, primary keys, summary statistics, and distribution-level file characterization) on top of the discovery foundation. It is composed by the application profiles published in [doc-discoverydatadescription](https://github.com/Cross-Domain-Interoperability-Framework/doc-discoverydatadescription) and [doc-discoverydatadescriptionstructure](https://github.com/Cross-Domain-Interoperability-Framework/doc-discoverydatadescriptionstructure). Those composite repositories carry the full human-facing implementation guidance and worked examples.
+> **Scope.** `cdifDataDescription` is a profile *module*: it defines only  data-description classes and properties (variable-level `cdif:physicalDataType`, primary keys, summary statistics, and distribution-level file characterization) to extend the discovery foundation. It is composed by the document specification published in [doc-discoverydatadescription](https://github.com/Cross-Domain-Interoperability-Framework/doc-discoverydatadescription) and [doc-discoverydatadescriptionstructure](https://github.com/Cross-Domain-Interoperability-Framework/doc-discoverydatadescriptionstructure). Those specifications carry full implementation guidance and worked examples for instance documents incorporating this profile.
 
 ## Specification
 
@@ -14,8 +14,6 @@ This repository holds the published artifacts for the **CDIF Data Description pr
 
 A conforming instance declares, in its `dcterms:conformsTo`:
 
-- `https://w3id.org/cdif/core/1.0`
-- `https://w3id.org/cdif/discovery/1.0`
 - `https://w3id.org/cdif/data_description/1.0`
 
 ## Examples

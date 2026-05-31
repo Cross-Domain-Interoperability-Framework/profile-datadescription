@@ -52,6 +52,8 @@ An instance document that includes this profile must declare conformance:
 ```
 and must include descriptions of variables using cdif:InstanceVariable.
 
+See also [graphical presentation of Data Description Profile](https://cross-domain-interoperability-framework.github.io/metadataBuildingBlocks/cdif-uml-model/CDIFDataDescription/index.html)
+
 # Properties added to schema:Dataset
 
 [↑ Back to TOC](#table-of-contents)
