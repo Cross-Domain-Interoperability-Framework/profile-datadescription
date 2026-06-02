@@ -14,7 +14,7 @@ This repository holds the published artifacts for the **CDIF Data Description pr
 
 A conforming instance declares, in its `dcterms:conformsTo`:
 
-- `https://w3id.org/cdif/data_description/1.0`
+- `https://w3id.org/cdif/data_description/1.1`
 
 ## Examples
 

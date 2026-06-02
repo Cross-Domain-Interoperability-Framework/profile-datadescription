@@ -46,7 +46,7 @@ An instance document that includes this profile must declare conformance:
 "schema:subjectOf": {
   "@type": ["schema:CreativeWork"], "schema:additionalType":["dcat:CatalogRecord"],
   "dcterms:conformsTo": [
-    "https://w3id.org/cdif/data_description/1.0"
+    "https://w3id.org/cdif/data_description/1.1"
   ]
 }
 ```
