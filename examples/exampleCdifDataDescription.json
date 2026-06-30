@@ -2,11 +2,10 @@
   "@context": {
     "schema": "http://schema.org/",
     "cdi": "http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/",
-    "csvw": "http://www.w3.org/ns/csvw#",
     "dcterms": "http://purl.org/dc/terms/",
     "dcat": "http://www.w3.org/ns/dcat#",
     "ex": "https://example.org/",
-    "cdif": "https://cdif.org/0.1/"
+    "cdif": "https://w3id.org/cdif/"
   },
   "@id": "ex:dataset/oceanTemp2025",
   "@type": [
