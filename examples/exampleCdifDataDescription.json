@@ -23,7 +23,9 @@
       "schema:Dataset"
     ],
     "schema:additionalType": [
-      "dcat:CatalogRecord"
+      {
+        "@id": "dcat:CatalogRecord"
+      }
     ],
     "@id": "ex:dataset/oceanTemp2025/metadata",
     "schema:about": {
