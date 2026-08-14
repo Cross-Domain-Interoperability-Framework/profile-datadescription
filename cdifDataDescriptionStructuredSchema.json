@@ -68,6 +68,7 @@
                       },
                       {
                         "type": "object",
+                        "additionalProperties": false,
                         "description": "object reference via @id to a cdifInstanceVariable declared elsewhere",
                         "properties": {
                           "@id": {
@@ -101,6 +102,7 @@
         },
         {
           "type": "object",
+          "additionalProperties": false,
           "description": "object reference via URI or URI fragment to a cdif:Key defined elsewhere in the same document",
           "properties": {
             "@id": {
@@ -137,6 +139,7 @@
           },
           {
             "type": "object",
+            "additionalProperties": false,
             "properties": {
               "@id": {
                 "type": "string"
@@ -155,6 +158,10 @@
           "type": "array",
           "items": {
             "type": "object",
+            "required": [
+              "@id"
+            ],
+            "additionalProperties": false,
             "properties": {
               "@id": {
                 "type": "string",
@@ -165,6 +172,10 @@
           "minItems": 1,
           "contains": {
             "type": "object",
+            "required": [
+              "@id"
+            ],
+            "additionalProperties": false,
             "properties": {
               "@id": {
                 "const": "https://w3id.org/cdif/data_description/1.1"
@@ -230,6 +241,10 @@
                   },
                   {
                     "type": "object",
+                    "required": [
+                      "@id"
+                    ],
+                    "additionalProperties": false,
                     "properties": {
                       "@id": {
                         "type": "string",
@@ -252,6 +267,10 @@
                     },
                     {
                       "type": "object",
+                      "required": [
+                        "@id"
+                      ],
+                      "additionalProperties": false,
                       "properties": {
                         "@id": {
                           "type": "string"
@@ -276,6 +295,10 @@
                   },
                   {
                     "type": "object",
+                    "required": [
+                      "@id"
+                    ],
+                    "additionalProperties": false,
                     "properties": {
                       "@id": {
                         "type": "string"
@@ -413,6 +436,7 @@
                                         },
                                         {
                                           "type": "object",
+                                          "additionalProperties": false,
                                           "required": [
                                             "@id"
                                           ],
@@ -520,6 +544,7 @@
                                                     },
                                                     {
                                                       "type": "object",
+                                                      "additionalProperties": false,
                                                       "required": [
                                                         "@id"
                                                       ],
@@ -561,6 +586,10 @@
                                               },
                                               {
                                                 "type": "object",
+                                                "required": [
+                                                  "@id"
+                                                ],
+                                                "additionalProperties": false,
                                                 "properties": {
                                                   "@id": {
                                                     "type": "string"
@@ -620,6 +649,7 @@
                                                   },
                                                   {
                                                     "type": "object",
+                                                    "additionalProperties": false,
                                                     "required": [
                                                       "@id"
                                                     ],
@@ -633,6 +663,7 @@
                                               },
                                               "contains": {
                                                 "type": "object",
+                                                "additionalProperties": false,
                                                 "required": [
                                                   "@id"
                                                 ],
@@ -648,6 +679,7 @@
                                               "type": "array",
                                               "items": {
                                                 "type": "object",
+                                                "additionalProperties": false,
                                                 "properties": {
                                                   "@id": {
                                                     "type": "string"
@@ -659,6 +691,10 @@
                                               },
                                               "contains": {
                                                 "type": "object",
+                                                "required": [
+                                                  "@id"
+                                                ],
+                                                "additionalProperties": false,
                                                 "properties": {
                                                   "@id": {
                                                     "const": "https://w3id.org/cdif/codelist/1.1"
@@ -673,6 +709,7 @@
                                             },
                                             "schema:about": {
                                               "type": "object",
+                                              "additionalProperties": false,
                                               "properties": {
                                                 "@id": {
                                                   "type": "string"
@@ -712,6 +749,10 @@
                                     },
                                     {
                                       "type": "object",
+                                      "required": [
+                                        "@id"
+                                      ],
+                                      "additionalProperties": false,
                                       "description": "object reference via URI or URI fragment referencing an @id in the same document",
                                       "properties": {
                                         "@id": {
@@ -733,6 +774,7 @@
                             },
                             {
                               "type": "object",
+                              "additionalProperties": false,
                               "description": "JSON-LD @id reference to a node defined elsewhere in the graph",
                               "properties": {
                                 "@id": {
@@ -866,6 +908,7 @@
                             },
                             {
                               "type": "object",
+                              "additionalProperties": false,
                               "description": "JSON-LD @id reference to a node defined elsewhere in the graph",
                               "properties": {
                                 "@id": {
@@ -898,6 +941,7 @@
                     },
                     {
                       "type": "object",
+                      "additionalProperties": false,
                       "properties": {
                         "@id": {
                           "type": "string"
@@ -973,6 +1017,7 @@
                                       },
                                       {
                                         "type": "object",
+                                        "additionalProperties": false,
                                         "required": [
                                           "@id"
                                         ],
@@ -1080,6 +1125,7 @@
                                                   },
                                                   {
                                                     "type": "object",
+                                                    "additionalProperties": false,
                                                     "required": [
                                                       "@id"
                                                     ],
@@ -1121,6 +1167,10 @@
                                             },
                                             {
                                               "type": "object",
+                                              "required": [
+                                                "@id"
+                                              ],
+                                              "additionalProperties": false,
                                               "properties": {
                                                 "@id": {
                                                   "type": "string"
@@ -1180,6 +1230,7 @@
                                                 },
                                                 {
                                                   "type": "object",
+                                                  "additionalProperties": false,
                                                   "required": [
                                                     "@id"
                                                   ],
@@ -1193,6 +1244,7 @@
                                             },
                                             "contains": {
                                               "type": "object",
+                                              "additionalProperties": false,
                                               "required": [
                                                 "@id"
                                               ],
@@ -1208,6 +1260,7 @@
                                             "type": "array",
                                             "items": {
                                               "type": "object",
+                                              "additionalProperties": false,
                                               "properties": {
                                                 "@id": {
                                                   "type": "string"
@@ -1219,6 +1272,10 @@
                                             },
                                             "contains": {
                                               "type": "object",
+                                              "required": [
+                                                "@id"
+                                              ],
+                                              "additionalProperties": false,
                                               "properties": {
                                                 "@id": {
                                                   "const": "https://w3id.org/cdif/codelist/1.1"
@@ -1233,6 +1290,7 @@
                                           },
                                           "schema:about": {
                                             "type": "object",
+                                            "additionalProperties": false,
                                             "properties": {
                                               "@id": {
                                                 "type": "string"
@@ -1272,6 +1330,10 @@
                                   },
                                   {
                                     "type": "object",
+                                    "required": [
+                                      "@id"
+                                    ],
+                                    "additionalProperties": false,
                                     "description": "object reference via URI or URI fragment referencing an @id in the same document",
                                     "properties": {
                                       "@id": {
@@ -1293,6 +1355,7 @@
                           },
                           {
                             "type": "object",
+                            "additionalProperties": false,
                             "description": "JSON-LD @id reference to a node defined elsewhere in the graph",
                             "properties": {
                               "@id": {
@@ -1426,6 +1489,7 @@
                           },
                           {
                             "type": "object",
+                            "additionalProperties": false,
                             "description": "JSON-LD @id reference to a node defined elsewhere in the graph",
                             "properties": {
                               "@id": {
@@ -1458,6 +1522,7 @@
                   },
                   {
                     "type": "object",
+                    "additionalProperties": false,
                     "properties": {
                       "@id": {
                         "type": "string"
@@ -1936,6 +2001,10 @@
             },
             {
               "type": "object",
+              "required": [
+                "@id"
+              ],
+              "additionalProperties": false,
               "properties": {
                 "@id": {
                   "type": "string"
@@ -1953,6 +2022,7 @@
             },
             {
               "type": "object",
+              "additionalProperties": false,
               "properties": {
                 "@id": {
                   "type": "string"
@@ -1969,6 +2039,10 @@
           "anyOf": [
             {
               "type": "object",
+              "required": [
+                "@id"
+              ],
+              "additionalProperties": false,
               "properties": {
                 "@id": {
                   "type": "string",
@@ -1986,6 +2060,10 @@
         },
         "cdi:qualifies": {
           "type": "object",
+          "required": [
+            "@id"
+          ],
+          "additionalProperties": false,
           "properties": {
             "@id": {
               "type": "string"
@@ -2039,6 +2117,10 @@
                 },
                 {
                   "type": "object",
+                  "required": [
+                    "@id"
+                  ],
+                  "additionalProperties": false,
                   "properties": {
                     "@id": {
                       "type": "string",
@@ -2061,6 +2143,10 @@
                   },
                   {
                     "type": "object",
+                    "required": [
+                      "@id"
+                    ],
+                    "additionalProperties": false,
                     "properties": {
                       "@id": {
                         "type": "string"
@@ -2085,6 +2171,10 @@
                 },
                 {
                   "type": "object",
+                  "required": [
+                    "@id"
+                  ],
+                  "additionalProperties": false,
                   "properties": {
                     "@id": {
                       "type": "string"
@@ -2165,6 +2255,10 @@
           "anyOf": [
             {
               "type": "object",
+              "required": [
+                "@id"
+              ],
+              "additionalProperties": false,
               "properties": {
                 "@id": {
                   "type": "string",
@@ -2226,6 +2320,7 @@
                     },
                     {
                       "type": "object",
+                      "additionalProperties": false,
                       "required": [
                         "@id"
                       ],
@@ -2371,6 +2466,10 @@
         },
         "cdif:formats_InstanceVariable": {
           "type": "object",
+          "required": [
+            "@id"
+          ],
+          "additionalProperties": false,
           "description": "Reference to a variable defined in schema:variableMeasured.",
           "properties": {
             "@id": {
@@ -2408,6 +2507,7 @@
             },
             {
               "type": "object",
+              "additionalProperties": false,
               "properties": {
                 "@id": {
                   "type": "string"
@@ -2429,6 +2529,7 @@
               },
               {
                 "type": "object",
+                "additionalProperties": false,
                 "properties": {
                   "@id": {
                     "type": "string"
@@ -2452,6 +2553,7 @@
               },
               {
                 "type": "object",
+                "additionalProperties": false,
                 "properties": {
                   "@id": {
                     "type": "string"
@@ -2577,6 +2679,7 @@
           "anyOf": [
             {
               "type": "object",
+              "additionalProperties": false,
               "properties": {
                 "@id": {
                   "type": "string"
@@ -2590,6 +2693,7 @@
               "type": "array",
               "items": {
                 "type": "object",
+                "additionalProperties": false,
                 "properties": {
                   "@id": {
                     "type": "string"
@@ -2609,6 +2713,7 @@
             "anyOf": [
               {
                 "type": "object",
+                "additionalProperties": false,
                 "description": "Reference (by URI) to a skos:Concept defined elsewhere. Used inside skos:broader / skos:narrower as the @id-reference alternative to an inline Concept.",
                 "properties": {
                   "@id": {
@@ -2633,6 +2738,7 @@
             "anyOf": [
               {
                 "type": "object",
+                "additionalProperties": false,
                 "description": "Reference (by URI) to a skos:Concept defined elsewhere. Used inside skos:broader / skos:narrower as the @id-reference alternative to an inline Concept.",
                 "properties": {
                   "@id": {
@@ -2738,6 +2844,7 @@
             },
             {
               "type": "object",
+              "additionalProperties": false,
               "properties": {
                 "@id": {
                   "type": "string"
@@ -2759,6 +2866,7 @@
               },
               {
                 "type": "object",
+                "additionalProperties": false,
                 "properties": {
                   "@id": {
                     "type": "string"
@@ -2851,6 +2959,7 @@
             },
             {
               "type": "object",
+              "additionalProperties": false,
               "properties": {
                 "@id": {
                   "type": "string"
@@ -2908,6 +3017,7 @@
             },
             {
               "type": "object",
+              "additionalProperties": false,
               "properties": {
                 "@id": {
                   "type": "string"
@@ -3156,6 +3266,7 @@
           "anyOf": [
             {
               "type": "object",
+              "additionalProperties": false,
               "properties": {
                 "@id": {
                   "type": "string"
@@ -3169,6 +3280,7 @@
               "type": "array",
               "items": {
                 "type": "object",
+                "additionalProperties": false,
                 "properties": {
                   "@id": {
                     "type": "string"
@@ -3186,6 +3298,7 @@
           "anyOf": [
             {
               "type": "object",
+              "additionalProperties": false,
               "properties": {
                 "@id": {
                   "type": "string"
@@ -3199,6 +3312,7 @@
               "type": "array",
               "items": {
                 "type": "object",
+                "additionalProperties": false,
                 "properties": {
                   "@id": {
                     "type": "string"
@@ -3218,6 +3332,7 @@
             "anyOf": [
               {
                 "type": "object",
+                "additionalProperties": false,
                 "description": "A reference to a SKOS Concept by URI.",
                 "properties": {
                   "@id": {
@@ -3242,6 +3357,7 @@
             "anyOf": [
               {
                 "type": "object",
+                "additionalProperties": false,
                 "description": "A reference to a SKOS Concept by URI.",
                 "properties": {
                   "@id": {
@@ -3280,6 +3396,7 @@
           "type": "array",
           "items": {
             "type": "object",
+            "additionalProperties": false,
             "properties": {
               "@id": {
                 "type": "string"
@@ -3309,6 +3426,7 @@
             "anyOf": [
               {
                 "type": "object",
+                "additionalProperties": false,
                 "properties": {
                   "@id": {
                     "type": "string"
@@ -3338,6 +3456,7 @@
           "type": "array",
           "items": {
             "type": "object",
+            "additionalProperties": false,
             "properties": {
               "@id": {
                 "type": "string"
