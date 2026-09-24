@@ -100,43 +100,43 @@ Distribution-level characterization — properties describing the physical file(
 
 - Specifies the role this variable plays in a data structure. UnitIdentifier names the unit a row describes; Measure holds observed/derived values; Attribute qualifies an observation; Dimension addresses a cell in a multi-dimensional cube; Descriptor names the variable that a Reference column records values for (long format); ReferenceVariable holds those recorded values. Enumeration: {UnitIdentifier, Measure, Attribute, Dimension, Descriptor, ReferenceVariable} 
 
-### cdif:simpleUnitOfMeasure':
+### cdif:simpleUnitOfMeasure
 
 - The unit in which the data values are measured (kg, pound, euro), expressed as a simple string, in cases where no additional information is available (in the legacy system)or needed (as in the case of broad agreement within the community of use [i.e., ISOcountry codes, currencies, etc. in SDMX]). Use cdi:describedUnitOfMeasure if there is a unit of measure definition from a published vocabulary that can be cited.  type: string
 
-### cdif:uses':
+### cdif:uses
 
-- Essentially the same as schema:propertyID. Specify the concept that this variable measures or represents. When the dataset's distribution carries cdi:isStructuredBy (CDIF Data Structure profile), cdif:uses references the RepresentedVariable that supplies the represented-variable-level properties below, which are then NOT duplicated on the InstanceVariable. type: string or cdifConceptOrTerm'
+- Essentially the same as schema:propertyID. Specify the concept that this variable measures or represents. When the dataset's distribution carries cdi:isStructuredBy (CDIF Data Structure profile), cdif:uses references the RepresentedVariable that supplies the represented-variable-level properties below, which are then NOT duplicated on the InstanceVariable. type: string or cdifConceptOrTerm
 
-### cdi:function':
+### cdi:function
 
 - Immutable characteristic of the variable such as geographic designator, weight, temporal designation, etc. type: array of string or cdifConceptOrTerm
 
-### cdi:platformType':
+### cdi:platformType
 
 - The application or technical system context in which the variable has been realized, typically a statistical processing package or processing environment.type: string or cdifConceptOrTerm
 
-### cdi:source':
+### cdi:source
 
 - Reference capturing provenance information for this InstanceVariable, either a string citation or object reference to the source resource.
 
-### cdif:isDescribedBy_StatisticsCollection':
+### cdif:isDescribedBy_StatisticsCollection
 
 - A StatisticsCollection holding summary / category statistics for this InstanceVariable. type: **cdif:StatisticsCollection** or object reference
 
-### cdi:describedUnitOfMeasure':
+### cdi:describedUnitOfMeasure
 
 - The unit in which the data values are measured, expressed as a controlled-vocabulary entry. For a plain-string unit, use cdif:simpleUnitOfMeasure instead. type: cdifConceptOrTerm
 
-### cdi:qualifies':
+### cdi:qualifies
 
 - reference to an instance variable defined for this dataset. This property only applies if the role is 'Attribute'. type: object reference 
 
-### cdi:takesSentinelValuesFrom':
+### cdi:takesSentinelValuesFrom
 
 - an enumerated domain that specifies possible sentinel values used by a variable. Sentinel values are special values used to indicate various invalid conditions for a variable, e.g. below detection, missing value.  type: array of SentinelValueDomain or object reference to a SentinelValue Domain
 
-### cdi:takesSubstantiveValuesFrom':
+### cdi:takesSubstantiveValuesFrom
 
 - Specification of the set of valid, meaningful values for a variable. Might be an enumeration/controlled vocabulary, a numeric limit, or constraints on strings - e.g. length, regular expressions. Array of SubstantiveValueDomain or object reference to SubstantiveValueDomain
 
@@ -150,15 +150,15 @@ Distribution-level characterization — properties describing the physical file(
 
 - value is a **cdif:EnumerationDomain** or an object reference to an EnumerationDomain. The enumeration domain is  wrapper for a cdif codelist object.  
 
-### cdif:displayLabel':
+### cdif:displayLabel
 
 - A human-readable display label for the value domain. type: string        
 
-### cdif:recommendedDataType':
+### cdif:recommendedDataType
 
 - The data type(s) that are recommended for use with this domain. type: array of xsdDataTypes.
 
-### cdi:isDescribedBy':
+### cdi:isDescribedBy
 
 - A **cdif:ValueAndConceptDescription** object or reference to a ValueAndConceptDescription. This is a formal description (ranges, patterns, classification level, expressions) of the values this domain admits.
 
@@ -168,7 +168,7 @@ Distribution-level characterization — properties describing the physical file(
 
 - A wrapper acting as an extension point to allow a cdif Codelist  to be documented as enumerated value domain.
 
-### cdif:identifier':
+### cdif:identifier
 
 - Identifier for this enumerated (categorical). Type: schema.org Identifier
 
@@ -196,7 +196,7 @@ See [cdifCodelistProfile](https://github.com/Cross-Domain-Interoperability-Frame
 
 - A Formal description of a set of values.
 
-### cdi:classificationLevel':
+### cdi:classificationLevel
 
 - Indicates the type of relationship, nominal, ordinal, interval, ratio, or continuous. Use where appropriate for the representation type. type: Enumeration {Continuous, Interval, Nominal, Ordinal, Ratio}
 
@@ -204,11 +204,11 @@ See [cdifCodelistProfile](https://github.com/Cross-Domain-Interoperability-Frame
 
 - A description of the value restrictions for this domainin human-readable language. type: string
 
-### cdi:formatPattern':
+### cdi:formatPattern
 
 - A pattern for a number as described in Unicode Locale Data Markup Language (LDML) (http://www.unicode.org/reports/tr35/tr35.html) Part 3: Numbers (http://www.unicode.org/reports/tr35/tr35-numbers.html#Number_Format_Patterns) and Part 4. Dates (http://www.unicode.org/reports/tr35/tr35-dates.html#Date_Format_Patterns). Examples would be #,##0.### to describe the pattern for a decimal number, or yyyy.MM.ddTHH:mm:ss zzz for a datetime pattern..  type: string
 
-### cdi:logicalExpression':
+### cdi:logicalExpression
 
 - A logical expression where the values of "x" making the expression true are the members of the set of valid values. For example, "(all reals x such that x > 0)" describes the real numbers greater than 0. type: string
 
@@ -220,15 +220,15 @@ See [cdifCodelistProfile](https://github.com/Cross-Domain-Interoperability-Frame
 
 - A string denoting the maximum possible value (including this value). From the W3C  Recommendation "Metadata Vocabulary for Tabular Data" section 5.11.2: "maxExclusive: An atomic property that contains a single number or string that is the maximum valid value (exclusive). The value of this property becomes the maximum exclusive annotation for the described datatype. See Value Constraints in [tabular-data-model](https://www.w3.org/TR/tabular-metadata/) for details." type: string
 
-### cdi:minimumValueExclusive':
+### cdi:minimumValueExclusive
 
 - A string denoting the minimum possible value (excluding this value) (see above for origin). type: string
 
-### cdi:minimumValueInclusive':
+### cdi:minimumValueInclusive
 
 - A string denoting the minimum possible value (including this value) (see above for origin). type: string
 
-### cdi:regularExpression':
+### cdi:regularExpression
 
 - A [regular expression](https://en.wikipedia.org/wiki/Regular_expression) that defines the valid syntax for valid value strings. type: string
 
