@@ -66,7 +66,7 @@ A Data Description record adds the following properties on the root schema:Datas
 
 ### cdif:hasPrimaryKey
 
-- the value is an object reference to a cdif:Key, or an inline cdif:Key. The cdif:Key is  an ordered set of cdi:InstanceVariables that uniquely identify a data instance. Each variable's position in the key is has a cdi:value integer that positions the variable in an ordered key. The cdif:Key object is a profile of the canonical DDI-CDI PrimaryKey structure matching. In the DataStructure profile, key (primary and foreign) are indexed by RepresentedVariable, not InstanceVariable.
+- the value is an object reference to a cdif:Key, or an inline cdif:Key. The cdif:Key is an ordered set of cdi:InstanceVariables that uniquely identify a data instance. Each variable is named by a cdi:ComponentPosition wrapper carrying cdi:indexes (an `@id` reference to the variable -- an inline variable definition is **not** permitted) and cdi:value (the 1-based position in the key, default `1`). The cdif:Key object is a profile of the canonical DDI-CDI PrimaryKey structure. The DataStructure profile uses the same cdif:Key for its primary and foreign keys, but there the referenced variables are RepresentedVariables rather than InstanceVariables.
 
 ### cdif:statistics
 
