@@ -25,7 +25,7 @@
 
 ## 1. Purpose and scope
 
-[↑ Back to TOC](#table-of-contents)
+[^ Back to TOC](#table-of-contents)
 
 The **CDIF Data Description profile** (`cdifDataDescription`) documents the *internal structure of a dataset's values* so that the data can be understood and integrated, not merely discovered. It builds on the CDIF discovery foundation and adds constraints that describe the variables a dataset measures, how those variables map to the physical file, the dataset's keys, and summary statistics. 
 
@@ -38,7 +38,7 @@ This guide documents the profiles's added constraints; consult those repositorie
 
 ## 2. Conformance
 
-[↑ Back to TOC](#table-of-contents)
+[^ Back to TOC](#table-of-contents)
 
 An instance document that includes this profile must declare conformance:
 
@@ -56,11 +56,11 @@ See also [graphical presentation of Data Description Profile](https://cross-doma
 
 # Properties added to schema:Dataset
 
-[↑ Back to TOC](#table-of-contents)
+[^ Back to TOC](#table-of-contents)
 
 ## schema:Dataset
 
-[↑ Back to TOC](#table-of-contents)
+[^ Back to TOC](#table-of-contents)
 
 A Data Description record adds the following properties on the root schema:Dataset class:
 
@@ -78,7 +78,7 @@ The DataDescription profile add **cdi:InstanceVariable** as a type for the schem
 
 # Properties added to schema:DataDownload
 
-[↑ Back to TOC](#table-of-contents)
+[^ Back to TOC](#table-of-contents)
 
 ### cdif:hasPhysicalMapping
 
@@ -86,11 +86,11 @@ Distribution-level characterization — properties describing the physical file(
 
 # Classes added by this profile
 
-[↑ Back to TOC](#table-of-contents)
+[^ Back to TOC](#table-of-contents)
 
 ## cdif:InstanceVariable
 
-[↑ Back to TOC](#table-of-contents)
+[^ Back to TOC](#table-of-contents)
 
 ### cdif:physicalDataType
 
@@ -142,7 +142,7 @@ Distribution-level characterization — properties describing the physical file(
 
 ## cdi:SentinelValueDomain, cdi:SubstantiveValueDomain
 
-[↑ Back to TOC](#table-of-contents)
+[^ Back to TOC](#table-of-contents)
 
 - value domain specifications are the same except for the @type values cdif:SentinelValueDomain and cdif:SubstantiveValueDomain respectively
 
@@ -164,7 +164,7 @@ Distribution-level characterization — properties describing the physical file(
 
 ## cdif:EnumerationDomain
 
-[↑ Back to TOC](#table-of-contents)
+[^ Back to TOC](#table-of-contents)
 
 - A wrapper acting as an extension point to allow a cdif Codelist  to be documented as enumerated value domain.
 
@@ -186,13 +186,13 @@ Distribution-level characterization — properties describing the physical file(
 
 ## cdif:Codelist
 
-[↑ Back to TOC](#table-of-contents)
+[^ Back to TOC](#table-of-contents)
 
 See [cdifCodelistProfile](https://github.com/Cross-Domain-Interoperability-Framework/profile-codelist/blob/main/CDIFCodelistImplementationGuide.md).    A controlled-vocabulary codelist implemented as a skos:ConceptScheme constrained for CDIF use. The scheme must have a resolvable @id and identify its top concepts via skos:hasTopConcept; each concept (CdifCodelistConcept) must have a resolvable @id, skos:inScheme, skos:prefLabel, and skos:notation. Hierarchical concepts must declare both skos:narrower (for JSON tree traversal) and skos:broader (for upward navigation) where hierarchy exists.
 
 ## cdif:ValueAndConceptDescription
 
-[↑ Back to TOC](#table-of-contents)
+[^ Back to TOC](#table-of-contents)
 
 - A Formal description of a set of values.
 
@@ -234,7 +234,7 @@ See [cdifCodelistProfile](https://github.com/Cross-Domain-Interoperability-Frame
 
 ## cdi:Statistics
 
-[↑ Back to TOC](#table-of-contents)
+[^ Back to TOC](#table-of-contents)
 
 A named bundle of one or more Statistic value objects for an instance      variable, optionally weighted, optionally broken down by Category.
 
@@ -260,7 +260,7 @@ value is an array of **CategoryStatistics** objects that maps a Statistic value 
 
 ## cdi:CategoryStatistics
 
-[↑ Back to TOC](#table-of-contents)
+[^ Back to TOC](#table-of-contents)
 
 Statistics for a specific Category of an instance variable within a data set. Maps a **Statistic** value object to a category concept. The Statistic value object represents a single computed value (mean, count, median, etc.), with optional computationBase and typeOfNumericValue.
 
@@ -282,7 +282,7 @@ The InstanceVariable whose values were used as weights (an @id-reference).
 
 ## cdi:StatisticsCollection
 
-[↑ Back to TOC](#table-of-contents)
+[^ Back to TOC](#table-of-contents)
 
 Groups one or more Statistics nodes for an instance variable. A typical use is a dataset-level collection holding row-count / mean / stddev Statistics for each measured variable.
 
@@ -300,13 +300,13 @@ CDIF addition (not in canonical DDI-CDI): the InstanceVariable(s) the contained 
 
 ## cdifConceptOrTerm
 
-[↑ Back to TOC](#table-of-contents)
+[^ Back to TOC](#table-of-contents)
 
 a data type that can be an object reference, a schema:DefinedTerm, or a skos:Concept as defined in the cdif ConceptScheme profile.
 
 ## cdif:PhysicalMapping
 
-[↑ Back to TOC](#table-of-contents)
+[^ Back to TOC](#table-of-contents)
 
 - Defines implementation-specific properties for the representation of a variable in a dataset. Uses 2026 DDI-CDI update flat per-column mapping structure.
 
@@ -363,7 +363,7 @@ a data type that can be an object reference, a schema:DefinedTerm, or a skos:Con
 
 ## cdif:TextMapping
 
-[↑ Back to TOC](#table-of-contents)
+[^ Back to TOC](#table-of-contents)
 
 - Physical mapping for a variable in a delimited or fixed-width text dataset. Extends cdifPhysicalMapping with text-format properties (column width and number formatting).
 
@@ -385,7 +385,7 @@ a data type that can be an object reference, a schema:DefinedTerm, or a skos:Con
 
 ## cdif:LocatorMapping
 
-[↑ Back to TOC](#table-of-contents)
+[^ Back to TOC](#table-of-contents)
 
 - extends cdif:PhysicalMapping. Locates a variable's value(s) within a structured (hierarchical) dataset such as XML or JSON, via a locator expression (e.g., XPath or JSONPath). DDI-CDI LocatorMapping. Used in place of column-index/text mappings for cdi:StructuredDataSet distributions.
 
@@ -395,7 +395,7 @@ a data type that can be an object reference, a schema:DefinedTerm, or a skos:Con
 
 # Validation
 
-[↑ Back to TOC](#table-of-contents)
+[^ Back to TOC](#table-of-contents)
 
 - **JSON Schema** — `cdifDataDescriptionStructuredSchema.json` (Draft 2020-12).
 - **SHACL** — `dataDescriptionRules.shacl`, a self-contained shapes graph merged from every composing building block plus the profile-level shapes.
@@ -409,7 +409,7 @@ Validation is **open-world**: properties beyond the profile are permitted.
 
 # Provenance of the artifacts
 
-[↑ Back to TOC](#table-of-contents)
+[^ Back to TOC](#table-of-contents)
 
 Generated from the canonical [metadataBuildingBlocks](https://github.com/Cross-Domain-Interoperability-Framework/metadataBuildingBlocks) register:
 
