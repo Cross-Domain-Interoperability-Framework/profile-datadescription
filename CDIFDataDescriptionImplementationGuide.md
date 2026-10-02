@@ -108,15 +108,15 @@ Distribution-level characterization — properties describing the physical file(
 
 - Essentially the same as schema:propertyID. Specify the concept that this variable measures or represents. When the dataset's distribution carries cdi:isStructuredBy (CDIF Data Structure profile), cdif:uses references the RepresentedVariable that supplies the represented-variable-level properties below, which are then NOT duplicated on the InstanceVariable. type: string or cdifConceptOrTerm
 
-### cdi:function
+### cdif:function
 
 - Immutable characteristic of the variable such as geographic designator, weight, temporal designation, etc. type: array of string or cdifConceptOrTerm
 
-### cdi:platformType
+### cdif:platformType
 
 - The application or technical system context in which the variable has been realized, typically a statistical processing package or processing environment.type: string or cdifConceptOrTerm
 
-### cdi:source
+### cdif:source
 
 - Reference capturing provenance information for this InstanceVariable, either a string citation or object reference to the source resource.
 
@@ -124,11 +124,11 @@ Distribution-level characterization — properties describing the physical file(
 
 - A StatisticsCollection holding summary / category statistics for this InstanceVariable. type: **cdif:StatisticsCollection** or object reference
 
-### cdi:describedUnitOfMeasure
+### cdif:describedUnitOfMeasure
 
 - The unit in which the data values are measured, expressed as a controlled-vocabulary entry. For a plain-string unit, use cdif:simpleUnitOfMeasure instead. type: cdifConceptOrTerm
 
-### cdi:qualifies
+### cdif:qualifies
 
 - reference to an instance variable defined for this dataset. This property only applies if the role is 'Attribute'. type: object reference 
 
@@ -204,11 +204,11 @@ See [cdifCodelistProfile](https://github.com/Cross-Domain-Interoperability-Frame
 
 - A description of the value restrictions for this domainin human-readable language. type: string
 
-### cdi:formatPattern
+### cdif:formatPattern
 
 - A pattern for a number as described in Unicode Locale Data Markup Language (LDML) (http://www.unicode.org/reports/tr35/tr35.html) Part 3: Numbers (http://www.unicode.org/reports/tr35/tr35-numbers.html#Number_Format_Patterns) and Part 4. Dates (http://www.unicode.org/reports/tr35/tr35-dates.html#Date_Format_Patterns). Examples would be #,##0.### to describe the pattern for a decimal number, or yyyy.MM.ddTHH:mm:ss zzz for a datetime pattern..  type: string
 
-### cdi:logicalExpression
+### cdif:logicalExpression
 
 - A logical expression where the values of "x" making the expression true are the members of the set of valid values. For example, "(all reals x such that x > 0)" describes the real numbers greater than 0. type: string
 
@@ -228,7 +228,7 @@ See [cdifCodelistProfile](https://github.com/Cross-Domain-Interoperability-Frame
 
 - A string denoting the minimum possible value (including this value) (see above for origin). type: string
 
-### cdi:regularExpression
+### cdif:regularExpression
 
 - A [regular expression](https://en.wikipedia.org/wiki/Regular_expression) that defines the valid syntax for valid value strings. type: string
 
@@ -238,7 +238,7 @@ See [cdifCodelistProfile](https://github.com/Cross-Domain-Interoperability-Frame
 
 A named bundle of one or more Statistic value objects for an instance      variable, optionally weighted, optionally broken down by Category.
 
-### cdi:typeOfStatistic
+### cdif:typeOfStatistic
 
 Controlled-vocabulary entry naming the kind of statistic — e.g. mean, median, count, sum, stdDev. Value is a skos:Concept
 
@@ -268,7 +268,7 @@ Statistics for a specific Category of an instance variable within a data set. Ma
 
 The Category this CategoryStatistics is for (inline CDIF Concept or an object reference).
 
-### cdi:typeOfStatistic
+### cdif:typeOfStatistic
 
 Controlled-vocabulary entry naming the kind of statistic. Inline CDIF concept or object reference
 
