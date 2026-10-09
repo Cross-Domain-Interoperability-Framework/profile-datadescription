@@ -314,7 +314,9 @@
                     "properties": {
                       "@type": {
                         "description": "Either construct, or both. A labeled link is a schema:CreativeWork at a URL; a dcat:Relationship is DCAT's association class for a typed relation to another resource. A node may declare both -- CDIF's own relation examples do -- but NEITHER IS REQUIRED TO ACCOMPANY THE OTHER.\nThat is the whole point of the anyOf. Until 2026-09-08 this block's Relation half required contains: dcat:Relationship while the labeled-link half required contains: schema:CreativeWork, and under allOf both applied to every instance, so an ordinary labeled link was unsatisfiable. Of profile-core's licenses the 29 plain strings and 1 @id-reference passed while the 10 that followed schema.org's own recommendation -- \"use schema:CreativeWork to provide a label (name) for the license\" -- failed. 412782113 fixed that by deleting the dcat:Relationship mandate outright, which left the JSON Schema with no notion of dcat:Relationship at all while rules.shacl went on targeting it as a class. A pure DCAT relation then met a SHACL requirement with no schema counterpart. This anyOf restores the type to the schema WITHOUT restoring the conjunction.",
-                        "default": "schema:CreativeWork",
+                        "default": [
+                          "schema:CreativeWork"
+                        ],
                         "type": "array",
                         "items": {
                           "type": "string"
@@ -804,11 +806,27 @@
                                 "cdif:purpose": {
                                   "type": "string",
                                   "description": "Intent or reason for the object/the description of the object."
+                                },
+                                "schema:description": {
+                                  "type": "string",
+                                  "description": "Prose statement of the values this domain admits. Required when cdif:references is absent, so that a domain naming no codelist still says what it enumerates."
                                 }
                               },
                               "required": [
                                 "@type"
-                              ]
+                              ],
+                              "if": {
+                                "not": {
+                                  "required": [
+                                    "cdif:references"
+                                  ]
+                                }
+                              },
+                              "then": {
+                                "required": [
+                                  "schema:description"
+                                ]
+                              }
                             },
                             {
                               "type": "object",
@@ -1368,11 +1386,27 @@
                               "cdif:purpose": {
                                 "type": "string",
                                 "description": "Intent or reason for the object/the description of the object."
+                              },
+                              "schema:description": {
+                                "type": "string",
+                                "description": "Prose statement of the values this domain admits. Required when cdif:references is absent, so that a domain naming no codelist still says what it enumerates."
                               }
                             },
                             "required": [
                               "@type"
-                            ]
+                            ],
+                            "if": {
+                              "not": {
+                                "required": [
+                                  "cdif:references"
+                                ]
+                              }
+                            },
+                            "then": {
+                              "required": [
+                                "schema:description"
+                              ]
+                            }
                           },
                           {
                             "type": "object",
@@ -2471,7 +2505,9 @@
                   "properties": {
                     "@type": {
                       "description": "Either construct, or both. A labeled link is a schema:CreativeWork at a URL; a dcat:Relationship is DCAT's association class for a typed relation to another resource. A node may declare both -- CDIF's own relation examples do -- but NEITHER IS REQUIRED TO ACCOMPANY THE OTHER.\nThat is the whole point of the anyOf. Until 2026-09-08 this block's Relation half required contains: dcat:Relationship while the labeled-link half required contains: schema:CreativeWork, and under allOf both applied to every instance, so an ordinary labeled link was unsatisfiable. Of profile-core's licenses the 29 plain strings and 1 @id-reference passed while the 10 that followed schema.org's own recommendation -- \"use schema:CreativeWork to provide a label (name) for the license\" -- failed. 412782113 fixed that by deleting the dcat:Relationship mandate outright, which left the JSON Schema with no notion of dcat:Relationship at all while rules.shacl went on targeting it as a class. A pure DCAT relation then met a SHACL requirement with no schema counterpart. This anyOf restores the type to the schema WITHOUT restoring the conjunction.",
-                      "default": "schema:CreativeWork",
+                      "default": [
+                        "schema:CreativeWork"
+                      ],
                       "type": "array",
                       "items": {
                         "type": "string"
@@ -2872,10 +2908,18 @@
                   "minItems": 1
                 },
                 "cdif:name": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  },
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      },
+                      "minItems": 1
+                    }
+                  ],
                   "description": "Human-understandable name(s). CDIF-simplified from DDI-CDI Category.name (ObjectName) to plain strings."
                 },
                 "cdif:descriptiveText": {
