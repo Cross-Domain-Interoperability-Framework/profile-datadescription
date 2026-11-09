@@ -16,6 +16,9 @@
         },
         "cdi": {
           "const": "http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/"
+        },
+        "cdif": {
+          "const": "https://w3id.org/cdif/"
         }
       }
     },
