@@ -651,7 +651,7 @@
                                                 "additionalProperties": false,
                                                 "properties": {
                                                   "@id": {
-                                                    "const": "https://w3id.org/cdif/codelist/1.1"
+                                                    "const": "https://w3id.org/cdif/codelist/2.0"
                                                   }
                                                 }
                                               },
@@ -1148,7 +1148,7 @@
                                               "additionalProperties": false,
                                               "properties": {
                                                 "@id": {
-                                                  "const": "https://w3id.org/cdif/codelist/1.1"
+                                                  "const": "https://w3id.org/cdif/codelist/2.0"
                                                 }
                                               }
                                             },
@@ -1812,7 +1812,7 @@
               "additionalProperties": false,
               "properties": {
                 "@id": {
-                  "const": "https://w3id.org/cdif/data_description/1.1"
+                  "const": "https://w3id.org/cdif/data_description/2.0"
                 }
               }
             }
