@@ -672,7 +672,7 @@ cdifd:dataDescriptionVariableShape a sh:NodeShape ;
     sh:property [ sh:message "For data description level, a cdi:InstanceVariable should specify cdif:physicalDataType." ;
             sh:minCount 1 ;
             sh:or ( [ sh:nodeKind sh:IRI ] [ sh:datatype xsd:string ;
-                        sh:minLength 3 ] [ sh:class schema:DefinedTerm ] ) ;
+                        sh:minLength 1 ] [ sh:class schema:DefinedTerm ] ) ;
             sh:path <https://w3id.org/cdif/physicalDataType> ;
             sh:severity sh:Warning ] ;
     sh:targetClass cdi:InstanceVariable .
